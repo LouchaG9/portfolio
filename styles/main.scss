@@ -1,0 +1,489 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;900&display=swap");
+
+* {
+    box-sizing: border-box;
+    --white-color: #EFECEA;
+    --green-color: #005E67;
+    --grey-color: #323233;
+}
+
+body {
+    background: var(--white-color);
+    font-family: 'neue-haas-unica', sans-serif;
+    font-style: normal;
+    color: var(--grey-color);
+    cursor: none;
+}
+
+#mouse-circle {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 3px solid rgb(0, 160, 139);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div {
+        background: rgb(0, 160, 139);
+        height: 7px;
+        width: 7px;
+        border-radius: 50%;
+    }
+}
+
+a {
+    i {
+        font-size: 1.5em;
+        transform: translateY(13%);
+        margin-right: 10px;
+    }
+}
+
+// Homepage Styles Desktop  ----------------------------------------
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background: none;
+    color: var(--grey-color);
+    height: auto;
+    .name {
+        text-decoration: none;
+        color: var(--green-color);
+        margin: 0 1em;
+        font-weight: bold;
+        font-size: 2em;
+        transition: 0.5s;
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-end;
+            a{
+                text-decoration: none;
+                color: var(--grey-color);
+                margin: 2em;
+            }
+        }
+    }
+
+.hero-copy {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    
+    h1 {
+        color: var(--green-color);
+        font-size: 5em;
+        line-height: 80%;
+        padding-bottom: 40px;
+    }
+
+    h3 {
+        font-size: 2em;
+        text-transform: lowercase;
+        font-weight: 300;
+        font-family: 'Inconsolata';
+    }
+}
+
+.real {
+    z-index: 15;
+}
+
+.clone {
+    h1 {
+        color: rgba(26, 70, 190, 0.3);    
+    }
+    color: rgba(26, 70, 190, 0.3);
+    z-index: 10;
+}
+
+.clone-2 {
+    h1 {
+        color: rgba(26, 70, 190, 0.3);    
+    }
+    color: rgba(190, 92, 26, 0.3);
+    z-index: 10;
+}
+
+.footer {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        list-style: none;
+        padding-left: 0;
+        color: var(--grey-color);
+
+        a{
+            text-decoration: none;
+            color: var(--grey-color);
+            margin: 0em 1em;
+        }
+    }
+}
+
+// Random Styles --------------------------------------------
+.section {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20%;
+    width: 60%;
+}
+
+h2 {
+    font-size: 4em;
+    span {
+        color: var(--green-color);
+    }
+}
+
+p {
+    width: 60%;
+}
+
+.skills {
+    width: 100%;
+    font-size: 1.4em;
+    margin-top: -1em;
+    font-family: 'Inconsolata', sans-serif;
+}
+
+sl-form {
+    width: 60%;
+    margin-top: 100px;
+    max-width: 600px;
+}
+
+#profile-photo {
+    width: 30%;
+    min-width: 300px;
+    border-radius: 25px;
+}
+
+h2.about {
+    margin-top: -1.5em;
+    margin-left: 0.3em;
+    color: var(--white-color);
+}
+
+h2.reach-out {
+    line-height: 0.9;
+    margin-bottom: -1em;
+}
+
+.scroll-cta {
+    visibility: hidden;
+}
+
+
+// Custom FP Nav Styling ----------------------------------------------------------------------------------------
+
+#fp-nav.fp-left {
+    left: 10px;
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background: var(--green-color);
+    border-radius: 3.5px;
+    height: 7px;
+    width: 15px;
+}
+
+#fp-nav ul li a.active span, 
+.fp-slidesNav ul li a.active span, 
+#fp-nav ul li:hover a.active span, 
+.fp-slidesNav ul li:hover a.active span {
+    height: 7px;
+    width: 30px;
+    border-radius: 3.5px;
+    margin: 0px;
+}
+
+#fp-nav ul li a span, 
+.fp-slidesNav ul li a span {
+    margin: 0;
+}
+
+#fp-nav > ul > li {
+    padding: 0;
+}
+
+#fp-nav ul li:hover a span, 
+.fp-slidesNav ul li:hover a span {
+    width: 20px;
+    height: 7px;
+    margin: 0px;
+}
+
+// Link hover effects ------------------------------------------------------------------------------------------------ 
+.link {
+    cursor: none;
+    position: relative;
+}
+
+.link::before,
+.link::after {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    border-radius: 2.5px;
+    background: var(--green-color);
+    top: 120%;
+    left: 0;
+    pointer-events: none;
+}
+
+.link::before {
+    content: '';
+}
+
+.link-louis::before {
+    transform-origin: 100% 100%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+}
+
+.link-louis:hover::before {
+    transform-origin: 0% 0%;
+    transform: scale3d(1, 1, 1);
+}
+
+
+//WORK SLIDES --------------------------------------------------------------------------------------------
+h3 {
+    font-size: 2.5em;
+    margin-top: -70px;
+    font-weight: 700;
+}
+.work-wrapper {
+    position: relative;
+    height: 450px;
+    width: 800px;
+    .card {
+        position: relative;
+        width: 60vw;
+        height: 350px;
+        background: var(--white-color);
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        transition: 0.5s;
+        .circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 25px;
+            overflow: hidden;
+        }
+        .circle::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--green-color);
+            clip-path: circle(120px at 120px);
+            transition: 0.5s;
+        }
+        &:hover .circle:before {
+            clip-path: circle(800px at center);
+            background: var(--grey-color);
+        }
+        .iphone {
+            position: absolute;
+            top: 50%;
+            left: 15%;
+            transform: translate(-50%, -50%);
+            height: 300px;
+            pointer-events: none;
+            transition: 0.5s;
+        }
+        &:hover .iphone {
+            left: 75%;
+            height: 450px;
+        }
+        .macbook {
+            position: absolute;
+            top: 60%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            height: 250px;
+            pointer-events: none;
+            transition: 0.5s;
+        }
+        &:hover .macbook {
+            left: 80%;
+            top: 50%;
+            height: 420px;
+        }
+        .content {
+            position: relative;
+            width: 70%;
+            left: 20%;
+            padding: 10px 20px 20px 40px;
+            transition: 0.5s;
+            opacity: 0;
+            visibility: hidden;
+            h2 {
+                color: var(--white-color);
+                font-size: 2em;
+                line-height: 1em;
+                margin-bottom: 10px;
+            }
+            p {
+                color: var(--white-color);
+            }
+            a {
+                position: relative;
+                text-decoration: none;
+                color: var(--white-color);
+                padding: 10px 20px;
+                border-radius: 10px;
+                background: var(--green-color);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 200px;
+                font-weight: 700;
+                margin-left: -2%;
+                i{
+                    font-size: 2em;
+                }
+            }
+        }
+        &:hover .content {
+            left: 0;
+            visibility: visible;
+            opacity: 1;
+        }
+    } 
+}
+
+@media (max-width: 800px) {
+    .card {
+        width: auto;
+        max-width: 350px;
+        align-items: flex-start;
+        &:hover {
+            height: 600px;
+        }
+        &:hover .iphone {
+            top: 70%;
+            left: 50%;
+            height: 350px;
+        }
+        .content {
+            width: 100%;
+            left: 0;
+            padding: 40px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 406px) {
+    .work {
+        width: 15px;
+        height: 200px;
+    }
+    nav{
+        ul {
+        visibility: hidden;
+        }
+        .name {
+            margin: 1em 2em;
+            font-size: 2em;
+        }
+    }
+    .nav-menu {
+        visibility: hidden;
+    }
+    #profile-photo {
+        min-width: 250px;
+    }
+    p {
+        width: 80%;
+    }
+    sl-form {
+        width: 80%;
+    }
+    h2 {
+        font-size: 3em;
+    }
+    h2.reach-out {
+        margin-bottom: 1em;
+    }
+    .hero-copy {
+        h3 {
+            font-size: 1.8em;
+        }
+    }
+    .scroll-cta {
+        visibility: visible;
+        width: 100%;
+        color: var(--green-color);
+        position: relative;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .rotated {
+        transform: rotate(180deg);
+    }
+
+    .pre-load {
+        #welcome {
+            font-size: 2em;
+            transform: translateY(60px);
+        }
+    }
+
+    #fp-nav {
+        top: 15%;
+    }
+}
+
+
+a, li, button {
+    cursor: none;
+}
+
+#fp-nav > ul > li:nth-child(1) > a, #fp-nav > ul > li:nth-child(2) > a, #fp-nav > ul > li:nth-child(3) > a, #fp-nav > ul > li:nth-child(4) > a, #fp-nav > ul > li:nth-child(5) > a, #fp-nav > ul > li:nth-child(6) > a, #fp-nav > ul > li:nth-child(7) > a {
+    cursor: none;
+}
