@@ -43,6 +43,7 @@ body {
   height: 7px;
   width: 7px;
   border-radius: 50%;
+  opacity: 0.5;
 }
 
 a i {
@@ -130,26 +131,59 @@ nav ul a {
   font-family: 'Inconsolata';
 }
 
+.svg {
+  position: fixed;
+  top: 7%;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: -1000;
+  opacity: 0.5;
+}
+
 .real {
   z-index: 15;
 }
 
-.clone {
-  color: rgba(26, 70, 190, 0.3);
-  z-index: 10;
+.primary-cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 2em;
+  margin-top: 1em;
+  background: var(--white-color);
+  border: solid 6px var(--green-color);
+  height: 60px;
+  width: 300px;
+  padding-left: 1em;
+  font-size: 1.6em;
+  text-decoration: none;
+  border-radius: 25px;
+  color: var(--grey-color);
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
-.clone h1 {
-  color: rgba(26, 70, 190, 0.3);
+.primary-cta i {
+  padding-left: 25px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  color: var(--green-color);
 }
 
-.clone-2 {
-  color: rgba(190, 92, 26, 0.3);
-  z-index: 10;
+.primary-cta:hover {
+  background: var(--green-color);
+  color: var(--white-color);
 }
 
-.clone-2 h1 {
-  color: rgba(26, 70, 190, 0.3);
+.primary-cta:hover i {
+  color: var(--white-color);
 }
 
 .footer {
@@ -191,6 +225,7 @@ nav ul a {
           flex-direction: column;
   padding-left: 20%;
   width: 60%;
+  overflow: hidden;
 }
 
 h2 {
@@ -380,7 +415,7 @@ h3 {
   left: 15%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  height: 300px;
+  height: 400px;
   pointer-events: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -388,7 +423,12 @@ h3 {
 
 .work-wrapper .card:hover .iphone {
   left: 75%;
-  height: 450px;
+  height: 600px;
+}
+
+.work-wrapper .card:hover .secondary {
+  left: 90%;
+  height: 650px;
 }
 
 .work-wrapper .card .macbook {
@@ -460,6 +500,24 @@ h3 {
   left: 0;
   visibility: visible;
   opacity: 1;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  overflow-y: scroll;
+  width: 100%;
+  z-index: 9999;
+}
+
+#creec {
+  background: url("../images/eotw/Slide 16_9 - 1.png") center;
+}
+
+.modal-go {
+  display: block;
 }
 
 @media (max-width: 800px) {
@@ -540,11 +598,6 @@ h3 {
   .rotated {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
-  }
-  .pre-load #welcome {
-    font-size: 2em;
-    -webkit-transform: translateY(60px);
-            transform: translateY(60px);
   }
   #fp-nav {
     top: 15%;

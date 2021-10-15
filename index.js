@@ -19,7 +19,7 @@ new fullpage('#fullpage', {
 	//Design
 	paddingTop: '3em',
 	paddingBottom: '10px',
-	fixedElements: '#nav, .footer',
+	fixedElements: '#nav, .footer, .svg',
 
 	afterRender: function() {
 		
@@ -101,8 +101,12 @@ function mouseFollow(event){
    // homepage text hover bit
    var rXP = (event.pageX - real.offsetLeft - real.offsetWidth /2)
    var rYP = (event.pageY - real.offsetTop - real.offsetHeight /2)
-
-   real.style.textShadow = rYP/20+'px '+rXP/160+'px rgba(227,6,19,.3), '+rYP/16+'px '+rXP/120+'px rgba(255,237,0,0.3), '+rXP/140+'px '+rYP/24+'px rgba(0,159,227,0.3)'
+   real.style.textShadow = rYP/20+'px '+rXP/160+'px rgba(161,207,190,.3), '+rYP/16+'px '+rXP/120+'px rgba(155,189,155,0.3), '+rXP/140+'px '+rYP/24+'px rgba(136,163,175,0.3)'
 }
 
 document.addEventListener("mousemove", mouseFollow, false)
+
+
+let opener = document.querySelector('.pop-up')
+const modal = document.querySelector('.modal')
+
