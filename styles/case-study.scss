@@ -209,6 +209,18 @@ main {
             width: 40%;
         }
     }
+    .image-wrap1 {
+        display: flex;
+        flex: row nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        height: auto;
+        img {
+            max-width: 30%;
+        }
+    }
     .image-wrap3 {
         display: flex;
         align-items: center;

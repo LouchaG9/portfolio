@@ -289,6 +289,28 @@ main .line {
   width: 40%;
 }
 
+.process .image-wrap1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: row;
+      -ms-flex: row nowrap;
+          flex: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.process .image-wrap1 img {
+  max-width: 30%;
+}
+
 .process .image-wrap3 {
   display: -webkit-box;
   display: -ms-flexbox;
