@@ -2,14 +2,14 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  --white-color: #EFECEA;
-  --green-color: #005E67;
+  --white-color: #efecea;
+  --green-color: #005e67;
   --grey-color: #323233;
 }
 
 body {
   background: var(--white-color);
-  font-family: 'neue-haas-unica', sans-serif;
+  font-family: "neue-haas-unica", sans-serif;
   font-style: normal;
   color: var(--grey-color);
   cursor: none;
@@ -128,12 +128,12 @@ nav ul a {
   font-size: 2em;
   text-transform: lowercase;
   font-weight: 300;
-  font-family: 'Inconsolata';
+  font-family: "Inconsolata";
 }
 
 .svg {
-  position: fixed;
-  top: 7%;
+  position: absolute;
+  top: 0;
   right: 0;
   bottom: 0;
   height: 100vh;
@@ -244,7 +244,7 @@ p {
   width: 100%;
   font-size: 1.4em;
   margin-top: -1em;
-  font-family: 'Inconsolata', sans-serif;
+  font-family: "Inconsolata", sans-serif;
 }
 
 sl-form {
@@ -330,7 +330,7 @@ h2.reach-out {
 }
 
 .link::before {
-  content: '';
+  content: "";
 }
 
 .link-louis::before {
@@ -390,7 +390,7 @@ h3 {
 }
 
 .work-wrapper .card .circle::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -604,11 +604,19 @@ h3 {
   }
 }
 
-a, li, button {
+a,
+li,
+button {
   cursor: none;
 }
 
-#fp-nav > ul > li:nth-child(1) > a, #fp-nav > ul > li:nth-child(2) > a, #fp-nav > ul > li:nth-child(3) > a, #fp-nav > ul > li:nth-child(4) > a, #fp-nav > ul > li:nth-child(5) > a, #fp-nav > ul > li:nth-child(6) > a, #fp-nav > ul > li:nth-child(7) > a {
+#fp-nav > ul > li:nth-child(1) > a,
+#fp-nav > ul > li:nth-child(2) > a,
+#fp-nav > ul > li:nth-child(3) > a,
+#fp-nav > ul > li:nth-child(4) > a,
+#fp-nav > ul > li:nth-child(5) > a,
+#fp-nav > ul > li:nth-child(6) > a,
+#fp-nav > ul > li:nth-child(7) > a {
   cursor: none;
 }
 /*# sourceMappingURL=main.css.map */

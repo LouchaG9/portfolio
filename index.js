@@ -19,7 +19,7 @@ new fullpage('#fullpage', {
 	//Design
 	paddingTop: '3em',
 	paddingBottom: '10px',
-	fixedElements: '#nav, .footer, .svg',
+	fixedElements: '#nav, .footer',
 
 	afterRender: function() {
 		
