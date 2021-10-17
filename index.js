@@ -155,11 +155,10 @@ document.addEventListener("mousemove", mouseFollow, false)
 
 
 // DIALOG STUFF - TABLED FOR NOW
-// let dialog = document.querySelector('#creec')
+// let dialog = document.querySelector('#creec-dialog')
 // let opener = document.querySelector('.open-dialog')
-// let closer = dialog.querySelector('sl-button[slot="footer"]');
+// // let closer = dialog.querySelector('sl-button[slot="footer"]');
 // opener.addEventListener('click', () => dialog.show())
-// closer.addEventListener('click', () => dialog.hide())
-
+// // closer.addEventListener('click', () => dialog.hide())
 
 
