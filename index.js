@@ -1,4 +1,4 @@
-// FULL PAGE JS STUFF -----------------------------------------------------------
+// FULL PAGE JS SETUP STUFF ======================================================================================================================================================================================
 
 new fullpage('#fullpage', {
 	//navigation
@@ -32,20 +32,38 @@ new fullpage('#fullpage', {
 			.from(".footer", { y:30 })
 
 	},
-
-	// Animations
+	
+	// Animations ======================================================================================================================================================================================
+	
 	onLeave: function(origin, destination, direction){
 		var loadedSection = this;
+
+		// WORK SLIDE ANIMATION ===========================================================================================
+		let workTL = gsap.timeline({defaults: {ease: "power1.out"}})
 
 		// Down
 		if(destination.anchor == 'break' && direction === 'down'){
 			gsap.from(".anim-in-1", {duration: 1, y: 100, stagger: 0.1});
+			workTL
+				.from("#card-one", { width: 0, duration: 1, x:-100, delay: 0.5 })
+				.from("#phone-one", { opacity: 0, duration: 0.5 })
+				.from("#content-one", { opacity: 0, x: 20, duration: 0.5 })
+
 		}  else if(destination.anchor == 'creec' && direction === 'down'){
 			gsap.from(".anim-in-2", {duration: 1, y: 100, stagger: 0.1});
+			workTL
+				.from("#card-two", { width: 0, duration: 1, x:-100, delay: 0.5 })
+				.from("#phone-two", { opacity: 0, duration: 0.5 })
+				.from("#content-two", { opacity: 0, x: 20, duration: 0.5 })
+
 		} else if(destination.anchor == 'ant-ex' && direction === 'down'){
 			gsap.from(".anim-in-3", {duration: 1, y: 100, stagger: 0.1});
+
+
 		} else if(destination.anchor == 'eotw' && direction === 'down'){
 			gsap.from(".anim-in-4", {duration: 1, y: 100, stagger: 0.1});
+
+
 		} else if(destination.anchor == 'about' && direction === 'down'){
 			gsap.from(".anim-in-5", {duration: 1, y: 100, stagger: 0.1});
 		} else if(destination.anchor == 'contact' && direction === 'down'){
@@ -54,12 +72,26 @@ new fullpage('#fullpage', {
 		// Up
 		if(destination.anchor == 'break' && direction === 'up'){
 			gsap.from(".anim-in-1", {duration: 1, y: -100, stagger: 0.1});
+			workTL
+				.from("#card-one", { width: 0, duration: 1, x:-100, delay: 0.5 })
+				.from("#phone-one", { opacity: 0, duration: 0.5 })
+				.from("#content-one", { opacity: 0, x: 20, duration: 0.5 })
+
 		} else if(destination.anchor == 'creec' && direction === 'up'){
 			gsap.from(".anim-in-2", {duration: 1, y: -100, stagger: 0.1});
+			workTL
+				.from("#card-two", { width: 0, duration: 1, x:-100, delay: 0.5 })
+				.from("#phone-two", { opacity: 0, duration: 0.5 })
+				.from("#content-two", { opacity: 0, x: 20, duration: 0.5 })
+
 		} else if(destination.anchor == 'ant-ex' && direction === 'up'){
 			gsap.from(".anim-in-3", {duration: 1, y: -100, stagger: 0.1});
+
+
 		} else if(destination.anchor == 'eotw' && direction === 'up'){
 			gsap.from(".anim-in-4", {duration: 1, y: -100, stagger: 0.1});
+
+
 		} else if(destination.anchor == 'about' && direction === 'up'){
 			gsap.from(".anim-in-5", {duration: 1, y: -100, stagger: 0.1});
 		} else if(destination.anchor == 'contact' && direction === 'up'){
@@ -74,8 +106,6 @@ new fullpage('#fullpage', {
 			scrollBtn.classList.remove("rotated")
 		}
 	}
-
-
 });
 
 //methods
@@ -89,16 +119,18 @@ scrollBtn.addEventListener('click', ()=> {
 
 
 
+
+// VARIABLES FOR MOUSE EVENTS ===============================================================================================================================================================================
 const circle = document.getElementById("mouse-circle")
 const real = document.querySelector('.real')
 
 
 function mouseFollow(event){
-   //custom cursor bit
+   //custom cursor
    circle.style.left = event.pageX + "px"
    circle.style.top = event.pageY + "px"
 
-   // homepage text hover bit
+   // homepage text hover
    var rXP = (event.pageX - real.offsetLeft - real.offsetWidth /2)
    var rYP = (event.pageY - real.offsetTop - real.offsetHeight /2)
    real.style.textShadow = rYP/20+'px '+rXP/160+'px rgba(161,207,190,.3), '+rYP/16+'px '+rXP/120+'px rgba(155,189,155,0.3), '+rXP/140+'px '+rYP/24+'px rgba(136,163,175,0.3)'
@@ -107,6 +139,14 @@ function mouseFollow(event){
 document.addEventListener("mousemove", mouseFollow, false)
 
 
-let opener = document.querySelector('.pop-up')
-const modal = document.querySelector('.modal')
+
+
+// DIALOG STUFF - TABLED FOR NOW
+// let dialog = document.querySelector('#creec')
+// let opener = document.querySelector('.open-dialog')
+// let closer = dialog.querySelector('sl-button[slot="footer"]');
+// opener.addEventListener('click', () => dialog.show())
+// closer.addEventListener('click', () => dialog.hide())
+
+
 
