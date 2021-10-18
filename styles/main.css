@@ -133,7 +133,7 @@ nav ul a {
 
 .svg {
   position: absolute;
-  top: 0;
+  top: 10%;
   right: 0;
   bottom: 0;
   height: 100vh;
@@ -444,7 +444,7 @@ sl-dialog .image-container img {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 20vh;
+  height: 7vh;
   background-color: var(--grey-color);
   z-index: -5;
 }
