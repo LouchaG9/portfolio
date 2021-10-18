@@ -283,10 +283,12 @@ h3 {
       left: 75%;
       height: 600px;
       transform: translate(-50%, -50%);
+      z-index: 10;
     }
     .secondary {
-      left: 90%;
-      height: 550px;
+      left: 95%;
+      height: 560px;
+      z-index: 2;
     }
     .macbook {
       position: absolute;

@@ -46,32 +46,34 @@ new fullpage('#fullpage', {
 			gsap.from(".anim-in-1", {duration: 1, y: 100, stagger: 0.1});
 			workTL
 				.from("#card-one", { width: 0, duration: 1, x:-100, delay: 0.5 })
-				.from("#phone-one", { opacity: 0, duration: 0.5 })
-				.from("#content-one", { opacity: 0, x: 20, duration: 0.5 })
+				.from("#phone-one", { opacity: 0, x:-50, duration: 0.3 })
+				.from("#content-one", { opacity: 0, x: 20, duration: 0.3 })
 
 		}  else if(destination.anchor == 'creec' && direction === 'down'){
 			gsap.from(".anim-in-2", {duration: 1, y: 100, stagger: 0.1});
 			workTL
 				.from("#card-two", { width: 0, duration: 1, x:-100, delay: 0.5 })
-				.from("#phone-two", { opacity: 0, duration: 0.5 })
-				.from("#content-two", { opacity: 0, x: 20, duration: 0.5 })
+				.from("#phone-two", { opacity: 0, x:-50, duration: 0.3 })
+				.from("#phone-two-2", { opacity: 0, x:-50, duration: 0.3 })
+				.from("#content-two", { opacity: 0, x: 20, duration: 0.3 })
 
 		} else if(destination.anchor == 'ant-ex' && direction === 'down'){
 			gsap.from(".anim-in-3", {duration: 1, y: 100, stagger: 0.1});
 			workTL
 				.from("#card-three", { width: 0, duration: 1, x:-100, delay: 0.5 })
-				.from("#macbook-three", { opacity: 0, duration: 0.5 })
-				.from("#content-three", { opacity: 0, x: 20, duration: 0.5 })
+				.from("#macbook-three", { opacity: 0, x:-50, duration: 0.3 })
+				.from("#content-three", { opacity: 0, x: 20, duration: 0.3 })
 
 		} else if(destination.anchor == 'eotw' && direction === 'down'){
 			gsap.from(".anim-in-4", {duration: 1, y: 100, stagger: 0.1});
 			workTL
 				.from("#card-four", { width: 0, duration: 1, x:-100, delay: 0.5 })
-				.from("#macbook-four", { opacity: 0, duration: 0.5 })
-				.from("#content-four", { opacity: 0, x: 20, duration: 0.5 })
+				.from("#macbook-four", { opacity: 0, x:-50, duration: 0.3 })
+				.from("#content-four", { opacity: 0, x: 20, duration: 0.3 })
 
 		} else if(destination.anchor == 'about' && direction === 'down'){
 			gsap.from(".anim-in-5", {duration: 1, y: 100, stagger: 0.1});
+			
 		} else if(destination.anchor == 'contact' && direction === 'down'){
 			gsap.from(".anim-in-6", {duration: 1, y: 100, stagger: 0.1});
 		}
@@ -80,29 +82,30 @@ new fullpage('#fullpage', {
 			gsap.from(".anim-in-1", {duration: 1, y: -100, stagger: 0.1});
 			workTL
 				.from("#card-one", { width: 0, duration: 1, x:-100, delay: 0.5 })
-				.from("#phone-one", { opacity: 0, duration: 0.5 })
-				.from("#content-one", { opacity: 0, x: 20, duration: 0.5 })
+				.from("#phone-one", { opacity: 0, x:-50, duration: 0.3 })
+				.from("#content-one", { opacity: 0, x: 20, duration: 0.3 })
 
 		} else if(destination.anchor == 'creec' && direction === 'up'){
 			gsap.from(".anim-in-2", {duration: 1, y: -100, stagger: 0.1});
 			workTL
 				.from("#card-two", { width: 0, duration: 1, x:-100, delay: 0.5 })
-				.from("#phone-two", { opacity: 0, duration: 0.5 })
-				.from("#content-two", { opacity: 0, x: 20, duration: 0.5 })
+				.from("#phone-two", { opacity: 0, x:-50, duration: 0.3 })
+				.from("#phone-two-2", { opacity: 0, x:-50, duration: 0.3 })
+				.from("#content-two", { opacity: 0, x: 20, duration: 0.3 })
 
 		} else if(destination.anchor == 'ant-ex' && direction === 'up'){
 			gsap.from(".anim-in-3", {duration: 1, y: -100, stagger: 0.1});
 			workTL
 				.from("#card-three", { width: 0, duration: 1, x:-100, delay: 0.5 })
-				.from("#macbook-three", { opacity: 0, duration: 0.5 })
-				.from("#content-three", { opacity: 0, x: 20, duration: 0.5 })
+				.from("#macbook-three", { opacity: 0, x:-50, duration: 0.3 })
+				.from("#content-three", { opacity: 0, x: 20, duration: 0.3 })
 
 		} else if(destination.anchor == 'eotw' && direction === 'up'){
 			gsap.from(".anim-in-4", {duration: 1, y: -100, stagger: 0.1});
 			workTL
 				.from("#card-four", { width: 0, duration: 1, x:-100, delay: 0.5 })
-				.from("#macbook-four", { opacity: 0, duration: 0.5 })
-				.from("#content-four", { opacity: 0, x: 20, duration: 0.5 })
+				.from("#macbook-four", { opacity: 0, x:-50, duration: 0.3 })
+				.from("#content-four", { opacity: 0, x: 20, duration: 0.3 })
 
 
 		} else if(destination.anchor == 'about' && direction === 'up'){

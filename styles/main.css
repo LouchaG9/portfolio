@@ -360,11 +360,13 @@ h3 {
   height: 600px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  z-index: 10;
 }
 
 .work-wrapper .card .secondary {
-  left: 90%;
-  height: 550px;
+  left: 95%;
+  height: 560px;
+  z-index: 2;
 }
 
 .work-wrapper .card .macbook {
