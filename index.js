@@ -4,7 +4,7 @@ new fullpage('#fullpage', {
 	//navigation
     menu: '#menu',
 	lockAnchors: false,
-	anchors:['landing', 'break', 'creec', 'ant-ex', 'eotw', 'about',  'contact'],
+	anchors:['landing', 'break', 'creec', 'eotw', 'ant-ex', 'about',  'contact'],
 	navigation: true,
 	navigationPosition: 'left',
 	showActiveTooltip: false,
@@ -57,14 +57,14 @@ new fullpage('#fullpage', {
 				.from("#phone-two-2", { opacity: 0, x:-50, duration: 0.3 })
 				.from("#content-two", { opacity: 0, x: 20, duration: 0.3 })
 
-		} else if(destination.anchor == 'ant-ex' && direction === 'down'){
+		} else if(destination.anchor == 'eotw' && direction === 'down'){
 			gsap.from(".anim-in-3", {duration: 1, y: 100, stagger: 0.1});
 			workTL
 				.from("#card-three", { width: 0, duration: 1, x:-100, delay: 0.5 })
 				.from("#macbook-three", { opacity: 0, x:-50, duration: 0.3 })
 				.from("#content-three", { opacity: 0, x: 20, duration: 0.3 })
 
-		} else if(destination.anchor == 'eotw' && direction === 'down'){
+		} else if(destination.anchor == 'ant-ex' && direction === 'down'){
 			gsap.from(".anim-in-4", {duration: 1, y: 100, stagger: 0.1});
 			workTL
 				.from("#card-four", { width: 0, duration: 1, x:-100, delay: 0.5 })
@@ -93,14 +93,14 @@ new fullpage('#fullpage', {
 				.from("#phone-two-2", { opacity: 0, x:-50, duration: 0.3 })
 				.from("#content-two", { opacity: 0, x: 20, duration: 0.3 })
 
-		} else if(destination.anchor == 'ant-ex' && direction === 'up'){
+		} else if(destination.anchor == 'eotw' && direction === 'up'){
 			gsap.from(".anim-in-3", {duration: 1, y: -100, stagger: 0.1});
 			workTL
 				.from("#card-three", { width: 0, duration: 1, x:-100, delay: 0.5 })
 				.from("#macbook-three", { opacity: 0, x:-50, duration: 0.3 })
 				.from("#content-three", { opacity: 0, x: 20, duration: 0.3 })
 
-		} else if(destination.anchor == 'eotw' && direction === 'up'){
+		} else if(destination.anchor == 'ant-ex' && direction === 'up'){
 			gsap.from(".anim-in-4", {duration: 1, y: -100, stagger: 0.1});
 			workTL
 				.from("#card-four", { width: 0, duration: 1, x:-100, delay: 0.5 })
