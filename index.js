@@ -157,11 +157,23 @@ document.addEventListener("mousemove", mouseFollow, false)
 
 
 
-// DIALOG STUFF - TABLED FOR NOW
-// let dialog = document.querySelector('#creec-dialog')
-// let opener = document.querySelector('.open-dialog')
-// // let closer = dialog.querySelector('sl-button[slot="footer"]');
-// opener.addEventListener('click', () => dialog.show())
-// // closer.addEventListener('click', () => dialog.hide())
+let opener = document.querySelector('.opener')
+let dialog = document.querySelector('.dialog')
+let closer = document.querySelector('.closer')
 
+function openDialog(){
+	dialog.show();
+	//fullpage_api.setAllowScrolling(false);
+}
 
+function closeDialog(){
+	dialog.hide();
+	//fullpage_api.setAllowScrolling(true);
+}
+
+opener.addEventListener('click', openDialog)
+closer.addEventListener('click', closeDialog);
+
+dialog.addEventListener('scroll', ()=> {
+	console.log('scroll detected')
+})

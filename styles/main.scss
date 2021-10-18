@@ -300,6 +300,14 @@ h3 {
     }
   }
 }
+sl-dialog {
+  .image-container {
+    height: 60vh;
+    width: 85vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+}
 
 // Custom FP Nav Styling ----------------------------------------------------------------------------------------
 

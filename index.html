@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://use.typekit.net/edg2hnz.css">
     <script src="https://kit.fontawesome.com/ad887abba3.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="styles/svg-anim.css">
 </head>
@@ -101,13 +100,16 @@
                 <div id="card-one" class="card">
                     <div id="content-one" class="content">
                         <p>Mobile first web app built in React.<br> Designed with a focus on mindfulness and calm design.</p>
-                        <a href="./break-case-study.html">See Case Study <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="#break" class="opener">see case study <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
-                    <img src="./images/phone.png" id="phone-one" class="phone">
+                    <img  src="./images/CREEC-MOCKUP-2.png" id="phone-one" class="phone">
                 </div>
             </div>
             <h3 class="anim-in-1">Break</h3>
             <p class="anim-in-1 skills"><i class="fab fa-html5"></i> HTML | <i class="fab fa-css3-alt"></i> CSS | <i class="fas fa-user"></i> UX Design | <i class="fab fa-react"></i> React</p>
+            
+ 
+            
         </div>
 
 
@@ -117,7 +119,7 @@
                 <div id="card-two" class="card">
                     <div id="content-two" class="content">
                         <p>Mobile UI design and UX study created as a proposal for the City of Canning, and the Canning River Eco Education Centre.</p>
-                        <a href="#creec" class="open-dialog">See Case Study <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="#creec">See Case Study <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                     <img  src="./images/CREEC-MOCKUP-2.png" id="phone-two-2" class="phone">
                     <img  src="./images/CREEC-MOCKUP-1.png" id="phone-two" class="phone secondary">
@@ -152,7 +154,7 @@
                     <div id="content-four" class="content">
                         <p>Static front-end website exploring effectively utilising GSAP, Flexbox, and Javascript data mapping.</p>
                         <p>Original illustrations.</p>
-                        <a href="./eotw-case-study.html">See Case Study <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="#">See Case Study <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                     <img src="./images/EOTW-MOCKUP.png" id="macbook-four" class="macbook">
                 </div>
@@ -189,6 +191,13 @@
                 <sl-button submit>Submit</sl-button>
             </sl-form>
         </div>
+    </div>
+    <sl-dialog label="Break" class="dialog" style="--width: 90vw;">
+        <div class="image-container">
+            <img src="./images/eotw/Slide 16_9 - 1.png" alt="eotw case study image">
+        </div>
+        <sl-button slot="footer" type="primary" class="closer">Close</sl-button>
+    </sl-dialog>
     
     <script src="https://kit.fontawesome.com/ad887abba3.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js" integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

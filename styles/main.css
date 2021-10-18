@@ -379,6 +379,13 @@ h3 {
   height: 550px;
 }
 
+sl-dialog .image-container {
+  height: 60vh;
+  width: 85vw;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
 #fp-nav.fp-left {
   left: 10px;
 }
