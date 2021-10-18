@@ -10,6 +10,7 @@ new fullpage('#fullpage', {
 	showActiveTooltip: false,
 	autoScrolling: true,
 	loopBottom: true,
+	normalScrollElements: '.dialog',
 
 	//Accessibility
 	keyboardScrolling: true,
@@ -163,12 +164,10 @@ let closer = document.querySelector('.closer')
 
 function openDialog(){
 	dialog.show();
-	//fullpage_api.setAllowScrolling(false);
 }
 
 function closeDialog(){
 	dialog.hide();
-	//fullpage_api.setAllowScrolling(true);
 }
 
 opener.addEventListener('click', openDialog)

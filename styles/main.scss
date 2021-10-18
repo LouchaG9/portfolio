@@ -15,6 +15,7 @@ body {
   cursor: none;
 }
 
+
 #mouse-circle {
   height: 40px;
   width: 40px;
@@ -301,12 +302,20 @@ h3 {
   }
 }
 sl-dialog {
+  --width: 1440px;
   .image-container {
-    height: 60vh;
-    width: 85vw;
-    overflow-y: scroll;
+    height: 80vh;
+    width: auto;
+    max-width: 1400px;
     overflow-x: hidden;
+    img {
+      width: 100%;
+    }
   }
+}
+
+.dialog::part(overlay) {
+    background-color: alpha($color: #323233);
 }
 
 // Custom FP Nav Styling ----------------------------------------------------------------------------------------
