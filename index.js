@@ -9,8 +9,8 @@ new fullpage('#fullpage', {
 	navigationPosition: 'left',
 	showActiveTooltip: false,
 	autoScrolling: true,
-	loopBottom: true,
-	normalScrollElements: '.dialog',
+	loopBottom: false,
+	normalScrollElements: '.eotw-dialog, .creec-dialog', 
 
 	//Accessibility
 	keyboardScrolling: true,
@@ -77,6 +77,7 @@ new fullpage('#fullpage', {
 			
 		} else if(destination.anchor == 'contact' && direction === 'down'){
 			gsap.from(".anim-in-6", {duration: 1, y: 100, stagger: 0.1});
+			gsap.to('.footer, ul, a', {color:"var(--white-color)"})
 		}
 		// Up
 		if(destination.anchor == 'break' && direction === 'up'){
@@ -111,8 +112,7 @@ new fullpage('#fullpage', {
 
 		} else if(destination.anchor == 'about' && direction === 'up'){
 			gsap.from(".anim-in-5", {duration: 1, y: -100, stagger: 0.1});
-		} else if(destination.anchor == 'contact' && direction === 'up'){
-			gsap.from(".anim-in-6", {duration: 1, y: -100, stagger: 0.1});
+			gsap.to('.footer, ul, a', {color:"var(--grey-color)"})
 		} else if(destination.anchor == 'landing' && direction === 'up'){
 			gsap.from(".anim-in-7", {duration: 1, y: -100, stagger: 0.1});
 		}
@@ -158,17 +158,32 @@ document.addEventListener("mousemove", mouseFollow, false)
 
 
 
-let opener = document.querySelector('.opener')
-let dialog = document.querySelector('.dialog')
-let closer = document.querySelector('.closer')
+let eotwOpener = document.querySelector('.eotw-opener')
+let eotwDialog = document.querySelector('.eotw-dialog')
+let eotwCloser = document.querySelector('.eotw-closer')
 
-function openDialog(){
-	dialog.show();
+function openEotwDialog(){
+	eotwDialog.show();
 }
 
-function closeDialog(){
-	dialog.hide();
+function closeEotwDialog(){
+	eotwDialog.hide();
 }
 
-opener.addEventListener('click', openDialog)
-closer.addEventListener('click', closeDialog);
+eotwOpener.addEventListener('click', openEotwDialog)
+eotwCloser.addEventListener('click', closeEotwDialog);
+
+let creecOpener = document.querySelector('.creec-opener')
+let creecDialog = document.querySelector('.creec-dialog')
+let creecCloser = document.querySelector('.creec-closer')
+
+function openCreecDialog(){
+	creecDialog.show();
+}
+
+function closeCreecDialog(){
+	creecDialog.hide();
+}
+
+creecOpener.addEventListener('click', openCreecDialog)
+creecCloser.addEventListener('click', closeCreecDialog);

@@ -16,16 +16,24 @@
 <body> 
     <div id="mouse-circle" class="mouse-circle"><div></div></div>
     <div id="fullpage">
+        <nav id="nav">
+            <a data-menuanchor="landing" href="#landing" class="name">lk</a>
+            <ul class="nav-ul">
+                <li ></li>
+                <li data-menuanchor="project"><a href="#break" class="link link-louis"><i class="fas fa-archive"></i> projects</a></li>
+                <li data-menuanchor="about"><a href="#about" class="link link-louis"><i class="fas fa-user-circle"></i> about</a></li>
+                <li data-menuanchor="contact"><a href="#contact" class="link link-louis"> <i class="fas fa-envelope"></i> contact</a></li>
+            </ul>
+        </nav>
+        <div class="footer">
+            <p class="scroll-cta"><i class="fas fa-chevron-down fa-2x"></i></p>
+            <ul class="nav-menu">
+                <li><a href="#" class="link link-louis"><i class="fab fa-instagram-square"></i> Instagram</a></li>
+                <li><a href="#" class="link link-louis"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+            </ul>
+        </div>
         <div class="section landing" data-anchor="landing">
-            <nav id="nav">
-                <a data-menuanchor="landing" href="#landing" class="name">lk</a>
-                <ul class="nav-ul">
-                    <li ></li>
-                    <li data-menuanchor="project"><a href="#break" class="link link-louis"><i class="far fa-file"></i> projects</a></li>
-                    <li data-menuanchor="about"><a href="#about" class="link link-louis"><i class="fas fa-user-circle"></i> about</a></li>
-                    <li data-menuanchor="contact"><a href="#contact" class="link link-louis"> <i class="fas fa-envelope"></i> contact</a></li>
-                </ul>
-            </nav>
+
 
             <div class="hero-copy">
                 <h1 class="anim-in-7 real">louis klause</h1>
@@ -86,13 +94,7 @@
             </div>
 
 
-            <div class="footer">
-                <p class="scroll-cta"><i class="fas fa-chevron-down fa-2x"></i></p>
-                <ul class="nav-menu">
-                    <li><a href="#" class="link link-louis"><i class="fab fa-instagram"></i> Instagram</a></li>
-                    <li><a href="#" class="link link-louis"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                </ul>
-            </div>
+
         </div>
 
         <div class="section" data-anchor="break">
@@ -100,7 +102,10 @@
                 <div id="card-one" class="card">
                     <div id="content-one" class="content">
                         <p>Mobile first web app built in React.<br> Designed with a focus on mindfulness and calm design.</p>
-                        <a href="#break">Case Study <i class="fas fa-arrow-circle-right"></i></a>
+                        <div class="btn-wrap">
+                            <a href="#break" class="break-opener">Case Study <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="#" target="_blank">Live Site <i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
                     <img  src="./images/CREEC-MOCKUP-2.png" id="phone-one" class="phone">
                 </div>
@@ -119,7 +124,10 @@
                 <div id="card-two" class="card">
                     <div id="content-two" class="content">
                         <p>Mobile UI design and UX study created as a proposal for the City of Canning, and the Canning River Eco Education Centre.</p>
-                        <a href="#creec">Case Study <i class="fas fa-arrow-circle-right"></i></a>
+                        <div class="btn-wrap">
+                            <a href="#creec" class="creec-opener">Case Study <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="./creec-prototype.html" target="_blank">Live Prototype <i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
                     <img  src="./images/CREEC-MOCKUP-2.png" id="phone-two-2" class="phone">
                     <img  src="./images/CREEC-MOCKUP-1.png" id="phone-two" class="phone secondary">
@@ -136,7 +144,10 @@
                 <div id="card-three" class="card">
                     <div id="content-three" class="content">
                         <p>Single page scrolling website design and build. Concept proposal created for EOTW 2022, a yearly web design conference ran by AWIA.</p>
-                        <div class="btn-wrap"><a href="#" class="opener">Case Study <i class="fas fa-arrow-circle-right"></i></a><a href="#" target="_blank">Live Site <i class="fas fa-external-link-alt"></i></a></div>
+                        <div class="btn-wrap">
+                            <a href="#" class="eotw-opener">Case Study <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="#" target="_blank">Live Site <i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
                     <img src="./images/eotw-mockup.png" id="macbook-three" class="macbook">
                 </div>
@@ -153,7 +164,10 @@
                     <div id="content-four" class="content">
                         <p>Static front-end website exploring effectively utilising GSAP, Flexbox, and Javascript data mapping.</p>
                         <p>Original illustrations.</p>
-                        <a href="#">See Case Study <i class="fas fa-arrow-circle-right"></i></a>
+                        <div class="btn-wrap">
+                            <a href="#ant-ex" class="ant-opener">Case Study <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="#" target="_blank">Live Site <i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
                     <img src="./images/EOTW-MOCKUP.png" id="macbook-four" class="macbook">
                 </div>
@@ -189,13 +203,23 @@
                 <br>
                 <sl-button submit>Submit</sl-button>
             </sl-form>
+            <div class="end">
+
+            </div>
         </div>
+
     </div>
-    <sl-dialog class="dialog">
+    <sl-dialog class="eotw-dialog">
         <div class="image-container">
             <img src="./images/eotw/EOTW-CS.png" alt="eotw case study image">
         </div>
-        <sl-button slot="footer" type="primary" class="closer">Close</sl-button>
+        <sl-button slot="footer" type="primary" class="eotw-closer">Close</sl-button>
+    </sl-dialog>
+    <sl-dialog class="creec-dialog">
+        <div class="image-container">
+            <img src="./images/eotw/EOTW-CS.png" alt="eotw case study image">
+        </div>
+        <sl-button slot="footer" type="primary" class="creec-closer">Close</sl-button>
     </sl-dialog>
     
     <script src="https://kit.fontawesome.com/ad887abba3.js" crossorigin="anonymous"></script>
