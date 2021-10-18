@@ -249,23 +249,29 @@ h3 {
       p {
         font-size: 1.5em;
       }
+      .btn-wrap {
+        display: flex;
+        gap: 1em;
+      }
       a {
         display: flex;
-        align-items: baseline;
+        align-items: center;
         justify-content: space-between;
         margin-top: 1em;
         background: var(--white-color);
         border: solid 6px var(--green-color);
         height: 60px;
-        width: 300px;
+        width: auto;
+        max-width: 300px;
         padding-left: 1em;
-        font-size: 1.6em;
+        font-size: 1.3em;
         text-decoration: none;
         border-radius: 25px;
         color: var(--grey-color);
         transition: 0.2s ease;
         i {
           padding-left: 25px;
+          padding-bottom: 5px;
           transition: 0.2s ease;
           color: var(--green-color);
         }
@@ -315,8 +321,14 @@ sl-dialog {
 }
 
 .dialog::part(overlay) {
-    background-color: alpha($color: #323233);
+  background-color: #323233;
 }
+
+.dialog::part(panel) {
+  background-color: var(--white-color);
+}
+
+
 
 // Custom FP Nav Styling ----------------------------------------------------------------------------------------
 

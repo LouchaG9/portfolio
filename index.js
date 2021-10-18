@@ -172,7 +172,3 @@ function closeDialog(){
 
 opener.addEventListener('click', openDialog)
 closer.addEventListener('click', closeDialog);
-
-dialog.addEventListener('scroll', ()=> {
-	console.log('scroll detected')
-})

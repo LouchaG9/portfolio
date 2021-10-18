@@ -313,13 +313,20 @@ h3 {
   font-size: 1.5em;
 }
 
+.work-wrapper .card .content .btn-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+}
+
 .work-wrapper .card .content a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -327,9 +334,10 @@ h3 {
   background: var(--white-color);
   border: solid 6px var(--green-color);
   height: 60px;
-  width: 300px;
+  width: auto;
+  max-width: 300px;
   padding-left: 1em;
-  font-size: 1.6em;
+  font-size: 1.3em;
   text-decoration: none;
   border-radius: 25px;
   color: var(--grey-color);
@@ -339,6 +347,7 @@ h3 {
 
 .work-wrapper .card .content a i {
   padding-left: 25px;
+  padding-bottom: 5px;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   color: var(--green-color);
@@ -395,7 +404,11 @@ sl-dialog .image-container img {
 }
 
 .dialog::part(overlay) {
-  background-color: 1;
+  background-color: #323233;
+}
+
+.dialog::part(panel) {
+  background-color: var(--white-color);
 }
 
 #fp-nav.fp-left {
